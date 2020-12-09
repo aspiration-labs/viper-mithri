@@ -1,0 +1,12 @@
+# files
+# -----
+
+*~
+\#*\#
+config.yaml
+serve-config.yaml
+
+# dirs
+# ----
+
+.idea
