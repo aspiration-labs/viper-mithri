@@ -25,7 +25,7 @@ for the curious.
 
 ### Why Mithri?
 
-Besides the Hellanic anti-toxin reference, `mithri` is unlikely to have many
+Besides the Hellenic anti-toxin reference, `mithri` is unlikely to have many
 name collisions in the Go ecosystem.
 
 ### What are We Trying to Solve?
