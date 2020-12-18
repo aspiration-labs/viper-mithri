@@ -33,6 +33,9 @@ func AddCommand(parentCmd *cobra.Command, defaults map[string]interface{}, appCo
 	if parentCmd.PersistentFlags().Lookup("config-env") == nil {
 		parentCmd.PersistentFlags().StringVar(&envPrefix, "config-env", "", "use env with prefix")
 	}
+	if parentCmd.PersistentFlags().Lookup("use-env") == nil {
+		parentCmd.PersistentFlags().BoolVar(&useEnv, "use-env", false, "use env")
+	}
 	cobra.OnInitialize(func() {
 		InitConfig(&config)
 	})

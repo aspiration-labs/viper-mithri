@@ -17,6 +17,7 @@ type Config struct {
 	viperConfigType string
 }
 
+var useEnv bool
 var envPrefix string
 
 // Compile from defaults and optional cfgFile into new viper instance and a config struct.
@@ -38,6 +39,8 @@ func InitConfig(config *Config) (*viper.Viper, error) {
 
 	if envPrefix != "" {
 		v.SetEnvPrefix(envPrefix)
+		v.AutomaticEnv()
+	} else if useEnv {
 		v.AutomaticEnv()
 	}
 
